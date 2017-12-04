@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="css/index.css">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/flashcanvas.js"></script>
+    <![endif]-->
+</head>
+<script src="js/flexible.js"></script>
+<body>
+<div class="head-coinput">
+    <div class="public-input"><input type="text" placeholder="请输入姓名" class="debtName"></div>
+    <div class="public-input"><input type="text" placeholder="请输入身份证" class="debtIdentity"></div>
+    <div class="public-input"><input type="text" placeholder="银行账号" class="bankCard"></div>
+
+    <div class="public-input1">
+        <input type="text" placeholder="借款人银行账户名称" class="cashs">
+    </div>
+    <div>
+        <button class="btn">生成欠条</button>
+    </div>
+</div>
+<div class="wrap-generation">
+    <div class="generation">
+        <div>
+            借款人：<span class="borrower"></span>
+        </div>
+        <div>
+            身份证号:<span class="identyPhone"></span>
+        </div>
+        <br/>
+        <div style="text-indent: 2em" class="border-name">
+            于<input type="text" class="getYeard">年<input type="text" class="getMouth">月<input type="text" class="getDATA">日向出借人俞佳辉借款人民币1000元（大写：壹仟元整），支付方式为：银行转账。借款期限为7天，定于
+            ：<input type="text" class="getYeard-a">年<input type="text" class="getMouth-a">月<input type="text" class="getDATA-a">日归还本息人民币1000元。如不能按时归还愿付违约金25元一天，愿承担所产生的一切法律责任。
+        </div>
+        <br/>
+        <div>
+            借款人银行账户名称：<span class="bank-phone"></span>
+        </div>
+        <div>
+            银行账号：<span class="bank-card"></span>
+        </div>
+        <div>
+            <button class="btnsign">点击签名</button>
+        </div>
+        <div>
+            <button class="btnsignSend">提交</button>
+        </div>
+    </div>
+
+</div>
+<div id="layer-sign">
+    <div class="dsslay">
+        <div class="pleaSign">请签名</div>
+
+        <div class="signLlayer">
+            <div id="signature" style="height: 90%;width: 100%"></div>
+        </div>
+        <div class="btnpublic">
+            <input type="submit" class="configSign" value="确定">
+            <input type="submit" class="cancel-layer" value="取消">
+        </div>
+
+    </div>
+</div>
+<div id="layer-debt">请输入姓名</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jSignature.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        var dataRewdata ="";
+        var innwidth = $(window).width();
+        var innheight = $(window).height();
+        console.log(innwidth)
+        $("#signature").jSignature('init',{height:innwidth,width:'360px'});
+        $(".btnsign").on("click",function () {
+            $("#layer-sign").show();
+            $(".btnsignSend").show();
+        });
+
+//        点击生成欠条
+        var layerDebt = $("#layer-debt");      //判断弹框
+        $(".btn").on("click",function () {
+            //姓名判断
+            if($(".debtName").val()==''){
+                layerDebt.html("请输入姓名");
+                layerDebt.show();
+                setTimeout(function () {
+                    layerDebt.hide();
+                },2000)
+                return false;
+            };
+            //身份证判断
+            var reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;//匹配身份证正则
+            var debtIdentity = $(".debtIdentity").val();
+            if(!reg.test(debtIdentity)){
+                layerDebt.html("请输入正确的身份证");
+                layerDebt.show();
+                setTimeout(function () {
+                    layerDebt.hide();
+                },2000)
+                return false;
+            }
+            //判断银行账号
+            var regBank = /^(\d{16}|\d{19})$/;//判断银行卡号
+            if ($(".bankCard").val()==''){
+                layerDebt.html("请输入银行账号");
+                layerDebt.show();
+                setTimeout(function () {
+                    layerDebt.hide();
+                },2000)
+                return false;
+            }
+            if( $(".bankCard").val()!==''){
+                if(!regBank.test($(".bankCard").val())){
+                    layerDebt.html("请输入正确的银行账号");
+                    layerDebt.show();
+                    setTimeout(function () {
+                        layerDebt.hide();
+                    },2000)
+                    return false;
+                }
+            }
+
+            if ($(".cashs").val()==''){
+                layerDebt.html("请输入银行账号名称");
+                layerDebt.show();
+                setTimeout(function () {
+                    layerDebt.hide();
+                },2000)
+                return false;
+            }
+            //出现借条模板
+            //$(".wrap-generation").show();
+            //姓名
+            $(".borrower").html($(".debtName").val());
+            //身份证号码
+            $(".identyPhone").html(debtIdentity);
+
+            //获取当前系统时间
+            var data = new Date();
+
+            //获取年份
+            var dataYear = data.getFullYear();
+            $(".getYeard").val(dataYear);       //当前时间
+
+            //获取月份
+            var dataMouth = data.getMonth()+1;
+            $(".getMouth").val(dataMouth);      //当前时间
+
+            //获取日份
+            var dataDay = data.getDate();
+            console.log(dataYear+":"+dataMouth+":"+dataDay)
+            $(".getDATA").val(dataDay);         //当前时间
+            //获取当前时间戳
+            var timestamp=new Date().getTime();
+            //7天的时间戳
+            var mouday = timestamp + 7 * 24 * 3600 * 1000;
+            //七天后的时间
+            var newDate = new Date(mouday);
+            $(".getYeard-a").val(newDate.getFullYear());
+            $(".getMouth-a").val(newDate.getMonth()+1);
+            $(".getDATA-a").val(newDate.getDate());
+
+            //银行卡号
+            $(".bank-phone").html($(".cashs").val());
+            //银行账号名称
+            $(".bank-card").html($(".bankCard").val());
+
+            //借款模板
+            $(".wrap-generation").css("opacity",1);
+        });
+
+        //取消签名弹框
+        $(".cancel-layer").on("click",function () {
+            $("#layer-sign").hide();
+            $("#signature").jSignature("reset") //清除画布并重新渲染的装饰就可以了
+        });
+        //点击确定签名按钮
+        $(".configSign").on("click",function () {
+            var datapair = $("#signature").jSignature("getData", "image");
+            $.ajax({
+                url:"http://loan.wechatpark.com/mymoney/common/uploadBase64",
+                type:"post",
+                data:{
+                    base64Data:"data:" + datapair[0] + "," + datapair[1]
+                },
+                success:function (res) {
+                    dataRewdata = res.return_value.url;
+                    $("#layer-sign").hide();
+                }
+            });
+        });
+    //点击提交
+        $(".btnsignSend").on("click",function () {
+            //欠条参数
+            $.ajax({
+                url:"http://loan.wechatpark.com/mymoney/save",
+                type:"post",
+                data:{
+                    name :$(".debtName").val(),
+                    idcard :$(".debtIdentity").val(),
+                    bankNo  :$(".bankCard").val(),
+                    bankName:$(".cashs").val(),
+                    address :dataRewdata
+                },
+                success:function (res) {
+                    if(res == "success"){
+                        layerDebt.html("借条提交成功！请联系客服");
+                        layerDebt.show();
+                        setTimeout(function () {
+                            layerDebt.hide();
+                            WeixinJSBridge.call('closeWindow');
+
+                        },2000);
+                    }
+
+                }
+            })
+
+        });
+
+
+
+
+    });
+</script>

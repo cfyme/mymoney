@@ -1,0 +1,23 @@
+2017-12-01 16:46:45.172 [main] INFO  com.fshows.proxy.ProxyApplication - Starting ProxyApplication on caofangyideMacBook-Pro.local with PID 68678 (/Users/caofy/workspace_util/my-money-demo/target/classes started by caofy in /Users/caofy/workspace_util/my-money-demo)
+2017-12-01 16:46:45.173 [main] INFO  com.fshows.proxy.ProxyApplication - No active profile set, falling back to default profiles: default
+2017-12-01 16:46:47.779 [main] INFO  com.fshows.proxy.ProxyApplication - Started ProxyApplication in 23.035 seconds (JVM running for 39.066)
+2017-12-01 16:51:20.226 [main] INFO  com.fshows.proxy.ProxyApplication - Starting ProxyApplication on caofangyideMacBook-Pro.local with PID 68695 (/Users/caofy/workspace_util/my-money-demo/target/classes started by caofy in /Users/caofy/workspace_util/my-money-demo)
+2017-12-01 16:51:20.227 [main] INFO  com.fshows.proxy.ProxyApplication - No active profile set, falling back to default profiles: default
+2017-12-01 16:51:23.188 [main] INFO  com.fshows.proxy.ProxyApplication - Started ProxyApplication in 23.276 seconds (JVM running for 39.066)
+2017-12-01 16:52:35.856 [http-nio-16666-exec-4] INFO  com.fshows.proxy.controller.QueryController - ----------uploadAuthImg-----------
+2017-12-01 16:52:36.604 [http-nio-16666-exec-4] INFO  com.fshows.proxy.controller.QueryController - 1, uploadAuthImg >> file=org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@2f370fd
+2017-12-01 16:52:37.967 [http-nio-16666-exec-4] INFO  com.fshows.proxy.controller.QueryController - 2, uploadAuthImg >> start to upload org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@2f370fd
+2017-12-01 16:53:17.845 [http-nio-16666-exec-4] INFO  com.fshows.proxy.service.ApiCommonService - fileName=20171201165247099166.jpeg
+2017-12-01 16:53:21.354 [http-nio-16666-exec-4] INFO  com.fshows.proxy.service.ApiCommonService - filePath=/tmp/files/upload/20171201165247099166.jpeg
+2017-12-01 16:53:23.796 [http-nio-16666-exec-4] INFO  com.fshows.proxy.service.ApiCommonService - key=kfshop/img/mymoney20171201165247099166.jpeg
+2017-12-01 16:54:24.741 [http-nio-16666-exec-4] INFO  com.fshows.proxy.service.ApiCommonService - uploadAuthImg >> url: https://img-kf.51youdian.com/kfshop/img/mymoney20171201165247099166.jpeg
+2017-12-01 16:59:46.761 [main] INFO  com.fshows.proxy.ProxyApplication - Starting ProxyApplication on caofangyideMacBook-Pro.local with PID 68711 (/Users/caofy/workspace_util/my-money-demo/target/classes started by caofy in /Users/caofy/workspace_util/my-money-demo)
+2017-12-01 16:59:46.762 [main] INFO  com.fshows.proxy.ProxyApplication - No active profile set, falling back to default profiles: default
+2017-12-01 16:59:49.517 [main] INFO  com.fshows.proxy.ProxyApplication - Started ProxyApplication in 23.109 seconds (JVM running for 38.925)
+2017-12-01 17:03:37.861 [http-nio-16666-exec-3] INFO  com.fshows.proxy.controller.QueryController - ----------uploadAuthImg-----------
+2017-12-01 17:03:39.099 [http-nio-16666-exec-3] INFO  com.fshows.proxy.controller.QueryController - 1, uploadAuthImg >> file=org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@14a5c17d
+2017-12-01 17:03:40.505 [http-nio-16666-exec-3] INFO  com.fshows.proxy.controller.QueryController - 2, uploadAuthImg >> start to upload org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@14a5c17d
+2017-12-01 17:03:42.241 [http-nio-16666-exec-3] INFO  com.fshows.proxy.service.ApiCommonService - fileName=20171201170342mymone340866.jpeg
+2017-12-01 17:03:42.241 [http-nio-16666-exec-3] INFO  com.fshows.proxy.service.ApiCommonService - filePath=/tmp/files/upload/20171201170342mymone340866.jpeg
+2017-12-01 17:03:42.241 [http-nio-16666-exec-3] INFO  com.fshows.proxy.service.ApiCommonService - key=kfshop/img/mymoney/20171201170342mymone340866.jpeg
+2017-12-01 17:03:42.996 [http-nio-16666-exec-3] INFO  com.fshows.proxy.service.ApiCommonService - uploadAuthImg end >> url: https://img-kf.51youdian.com/kfshop/img/mymoney/20171201170342mymone340866.jpeg
