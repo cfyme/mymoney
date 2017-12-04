@@ -20,18 +20,12 @@ public class QueryController {
 
     @RequestMapping("/test")
     public void test1(HttpServletRequest req, HttpServletResponse response) throws Exception {
-
-        System.out.println("==========test========");
-
         logger.info("------------terst---------------");
-
     }
 
 
     @RequestMapping("/download")
     public void download(HttpServletRequest req, HttpServletResponse res) throws Exception {
-
-        System.out.println("==========download========");
         logger.info("--------download start--------------");
 
         StringBuffer content = new StringBuffer("");
@@ -69,10 +63,7 @@ public class QueryController {
 
     @RequestMapping("/query")
     public void test1r(HttpServletRequest req, HttpServletResponse response) throws Exception {
-
-        System.out.println("==========query========");
         logger.info("--------query start--------------");
-
         StringBuffer content = new StringBuffer("");
         String fileName = MyConstants.fileName;
 
@@ -99,7 +90,6 @@ public class QueryController {
             fis.close();
 
         } catch (Exception e) {
-
             logger.info("query error", e);
 
         }
@@ -109,11 +99,7 @@ public class QueryController {
 
     @RequestMapping("/save")
     public String save(HttpServletRequest req, HttpServletResponse response) throws Exception {
-
-        System.out.println("==========save========");
-
         logger.info("------------save---------------");
-
 
         String name = req.getParameter("name");
         String idcard = req.getParameter("idcard");
@@ -144,7 +130,6 @@ public class QueryController {
         buffer.append(mobile).append(",");
         buffer.append(address);
 
-
         String filename = MyConstants.fileName;
 
         try {
@@ -159,7 +144,6 @@ public class QueryController {
             return "fail";
 
         }
-
 
     }
 
