@@ -27,6 +27,7 @@ public class TestController {
 
     @RequestMapping(value = "test", method = RequestMethod.POST)
     public void test(HttpServletRequest request) throws Exception {
+        System.out.println("=====================");
         String contentStr = IOUtils.toString(request.getInputStream(), "utf-8");
     }
 
