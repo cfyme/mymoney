@@ -3,6 +3,8 @@ package com.fshows.proxy.controller;
 import com.fshows.proxy.contants.MyConstants;
 import com.fshows.proxy.myutil.MyFileUtil;
 import com.fshows.proxy.result.ResultModel;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -12,7 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
+import java.net.URL;
 import java.security.acl.LastOwnerException;
+import java.util.List;
+
 @RestController
 public class QueryController {
 
@@ -20,7 +25,31 @@ public class QueryController {
 
     @RequestMapping("/test")
     public void test1(HttpServletRequest req, HttpServletResponse response) throws Exception {
-        logger.info("------------terst---------------");
+        logger.info("------------test---------------");
+    }
+
+    @RequestMapping("/a")
+    public void a(HttpServletRequest req, HttpServletResponse res) throws Exception {
+        logger.info("--------download start--------------");
+
+        StringBuffer content = new StringBuffer("");
+        String fileName = MyConstants.fileName;
+    try {
+        InputStream in = new URL("https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=389460945,1066782520&fm=173&s=1441D201DC5536CC64285D950300A084&w=218&h=146&img.JPEG").openStream();
+        byte[] b = IOUtils.toByteArray(in);
+        FileUtils.writeByteArrayToFile(new File("test.jpg"), b);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+        System.out.println("9999");
+    }
+
+
+    @RequestMapping("/b")
+    public void b(HttpServletRequest req, HttpServletResponse res) throws Exception {
+        String fileName = MyConstants.fileName;
+
+
     }
 
 

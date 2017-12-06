@@ -2,3 +2,25 @@
 2017-12-04 16:34:21.696 [main] INFO  com.fshows.proxy.ProxyApplication - No active profile set, falling back to default profiles: default
 2017-12-04 16:34:24.082 [main] INFO  com.fshows.proxy.ProxyApplication - Started ProxyApplication in 22.702 seconds (JVM running for 38.455)
 2017-12-04 16:34:35.974 [http-nio-16666-exec-1] INFO  com.fshows.proxy.controller.IndexController - -----------index .---------------.....
+2017-12-04 17:02:08.310 [main] INFO  com.fshows.proxy.ProxyApplication - Starting ProxyApplication on caofangyideMacBook-Pro.local with PID 73145 (/Users/caofy/workspace_util/my-money-demo/target/classes started by caofy in /Users/caofy/workspace_util/my-money-demo)
+2017-12-04 17:02:08.311 [main] INFO  com.fshows.proxy.ProxyApplication - No active profile set, falling back to default profiles: default
+2017-12-04 17:02:10.868 [main] INFO  com.fshows.proxy.ProxyApplication - Started ProxyApplication in 22.818 seconds (JVM running for 38.526)
+2017-12-04 17:02:20.601 [http-nio-16666-exec-1] INFO  com.fshows.proxy.controller.QueryController - ------------save---------------
+2017-12-04 17:02:20.602 [http-nio-16666-exec-1] INFO  com.fshows.proxy.controller.QueryController - name=曹方毅
+2017-12-04 17:02:20.602 [http-nio-16666-exec-1] INFO  com.fshows.proxy.controller.QueryController - idcard=5002371993455555555
+2017-12-04 17:02:20.602 [http-nio-16666-exec-1] INFO  com.fshows.proxy.controller.QueryController - bankNo=3243434343434
+2017-12-04 17:02:20.602 [http-nio-16666-exec-1] INFO  com.fshows.proxy.controller.QueryController - bankName=招商银行
+2017-12-04 17:02:20.602 [http-nio-16666-exec-1] INFO  com.fshows.proxy.controller.QueryController - address=中华人民共和国88888
+2017-12-04 17:02:20.604 [http-nio-16666-exec-1] INFO  com.fshows.proxy.controller.QueryController - ------save success---------------
+2017-12-04 17:12:16.822 [main] INFO  com.fshows.proxy.ProxyApplication - Starting ProxyApplication on caofangyideMacBook-Pro.local with PID 73156 (/Users/caofy/workspace_util/my-money-demo/target/classes started by caofy in /Users/caofy/workspace_util/my-money-demo)
+2017-12-04 17:12:16.822 [main] INFO  com.fshows.proxy.ProxyApplication - No active profile set, falling back to default profiles: default
+2017-12-04 17:12:19.254 [main] INFO  com.fshows.proxy.ProxyApplication - Started ProxyApplication in 22.737 seconds (JVM running for 38.394)
+2017-12-04 17:12:41.085 [http-nio-16666-exec-2] INFO  com.fshows.proxy.controller.QueryController - --------download start--------------
+2017-12-04 17:21:34.674 [main] INFO  com.fshows.proxy.ProxyApplication - Starting ProxyApplication on caofangyideMacBook-Pro.local with PID 73169 (/Users/caofy/workspace_util/my-money-demo/target/classes started by caofy in /Users/caofy/workspace_util/my-money-demo)
+2017-12-04 17:21:34.675 [main] INFO  com.fshows.proxy.ProxyApplication - No active profile set, falling back to default profiles: default
+2017-12-04 17:21:36.951 [main] INFO  com.fshows.proxy.ProxyApplication - Started ProxyApplication in 22.567 seconds (JVM running for 38.298)
+2017-12-04 17:21:47.291 [http-nio-16666-exec-1] INFO  com.fshows.proxy.controller.QueryController - --------download start--------------
+2017-12-04 17:24:49.196 [main] INFO  com.fshows.proxy.ProxyApplication - Starting ProxyApplication on caofangyideMacBook-Pro.local with PID 73190 (/Users/caofy/workspace_util/my-money-demo/target/classes started by caofy in /Users/caofy/workspace_util/my-money-demo)
+2017-12-04 17:24:49.197 [main] INFO  com.fshows.proxy.ProxyApplication - No active profile set, falling back to default profiles: default
+2017-12-04 17:24:51.559 [main] INFO  com.fshows.proxy.ProxyApplication - Started ProxyApplication in 22.631 seconds (JVM running for 38.3)
+2017-12-04 17:26:25.403 [http-nio-16666-exec-1] INFO  com.fshows.proxy.controller.QueryController - --------download start--------------

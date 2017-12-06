@@ -1,0 +1,6 @@
+2017-12-06 10:18:40.410 [main] INFO  com.fshows.proxy.ProxyApplication - Starting ProxyApplication on caofangyideMacBook-Pro.local with PID 74578 (/Users/caofy/workspace_util/my-money-demo/target/classes started by caofy in /Users/caofy/workspace_util/my-money-demo)
+2017-12-06 10:18:40.410 [main] INFO  com.fshows.proxy.ProxyApplication - No active profile set, falling back to default profiles: default
+2017-12-06 10:18:42.964 [main] INFO  com.fshows.proxy.ProxyApplication - Started ProxyApplication in 22.87 seconds (JVM running for 38.646)
+2017-12-06 10:23:26.851 [main] INFO  com.fshows.proxy.ProxyApplication - Starting ProxyApplication on caofangyideMacBook-Pro.local with PID 74588 (/Users/caofy/workspace_util/my-money-demo/target/classes started by caofy in /Users/caofy/workspace_util/my-money-demo)
+2017-12-06 10:23:26.852 [main] INFO  com.fshows.proxy.ProxyApplication - No active profile set, falling back to default profiles: default
+2017-12-06 10:23:29.058 [main] INFO  com.fshows.proxy.ProxyApplication - Started ProxyApplication in 22.463 seconds (JVM running for 38.144)
